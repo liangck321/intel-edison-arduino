@@ -25,7 +25,7 @@ function showMessage(message) {
         var now = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
         var lines = now.split(' ');
         display.setColor(red, green, blue);
-        display.setCursor(0, 0);
+        display.setCursor(1, 1);
         display.write(lines[0]);
         display.setCursor(1, 1);
         display.write(lines[1]);
