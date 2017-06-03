@@ -22,14 +22,13 @@ function showMessage(message) {
                 }
             }
         }
-        var now = new Date();
-        var line1 = now.getDate()+" "+now.getMonth()+","+now.getFullYear();
-        var line2 = now.getHours()+" "+now.getMinutes()+","+now.getSeconds();
+        var now = new Date().toISOString().replace(/T/, ' ').replace(/\..+/, '');
+        var lines = now.split(' ');
         display.setColor(red, green, blue);
         display.setCursor(0, 0);
-        display.write(line1);
+        display.write(lines[0]);
         display.setCursor(1, 1);
-        display.write(line2);
+        display.write(lines[1]);
         // extra padding clears out previous text
     }, 1000);
 }
