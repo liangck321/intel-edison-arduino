@@ -1,6 +1,6 @@
 var lcd = require('./lcd/display-text');
 var lcdOff = require('./lcd/off');
-var buzzer = require('/buzzer/on')
+var buzzer = require('./buzzer/on')
 
 buzzer.buzz();
 
